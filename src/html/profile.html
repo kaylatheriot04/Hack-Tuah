@@ -3,38 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Profile</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Create Profile</title>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="chat.html">Chat</a>
-        <a href="reviews.html">Reviews & Ratings</a>
-        <a href="tours.html">Customized Tours</a>
-    </nav>
+    <script src="../js/loadNavbar.js"></script>
 
     <section id="profile-section">
         <h2>Your Profile</h2>
         <!-- Profile Form -->
-        <form id="profile-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="enter your name">
+        <form id="profile-form" onsubmit="saveProfile(event)">
+            <label for="full-name">Name:</label>
+            <input type="text" id="full-name" name="name" placeholder="enter your name" required>
 
             <label for="interests">Interests:</label>
-            <input type="text" id="interests" name="interests" placeholder="e.g., Art, Food, Hiking">
+            <input type="text" id="interests" name="interests" placeholder="e.g., Art, Food, Hiking" required>
 
             <label for="location">Location:</label>
-            <input type="text" id="location" name="location" placeholder="City, Country">
+            <input type="text" id="location" name="location" placeholder="City, Country" required>
 
             <label for="bio">Bio:</label>
-            <input type="text" id="bio" name="bio" placeholder="Tell a bit about yourself">
+            <input type="text" id="bio" name="bio" placeholder="Tell a bit about yourself" required>
 
-            <button type="submit">Save Changes</button>
+            <button type="submit">Save Profile</button>
         </form>
     </section>
 
-    <script src="js/profile.js"></script>
+    <script src="../js/profile.js"></script>
 </body>
 </html>
