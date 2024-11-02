@@ -1,5 +1,9 @@
+alert("auth.js is loaded");
+
 // Signup function with username uniqueness check and redirect to profile creation
 function signUp() {
+    alert("Sign Up button clicked!"); // This alert checks if the function is called
+
     const phone = document.getElementById('signup-phone').value;
     const username = document.getElementById('signup-username').value;
     const password = document.getElementById('signup-password').value;
@@ -20,7 +24,7 @@ function signUp() {
             localStorage.setItem('currentUser', JSON.stringify(newUser));
 
             alert('Sign up successful! Please complete your profile.');
-            window.location.href = 'profile.html';
+            window.location.href = "profile.html";
         }
     } else {
         alert('Please fill in all fields');
@@ -44,21 +48,3 @@ function logIn() {
         alert('Incorrect username or password');
     }
 }
-
-// Logout function
-function logOut() {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('currentUser');
-    alert('You have been logged out.');
-    window.location.href = 'login.html';
-}
-
-// Redirect logged-in users away from signup/login pages
-window.onload = function() {
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
-    const isAuthPage = window.location.pathname.includes('login.html') || window.location.pathname.includes('signup.html');
-
-    if (isLoggedIn === 'true' && isAuthPage) {
-        window.location.href = 'index.html';
-    }
-};

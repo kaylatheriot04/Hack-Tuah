@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 <head>
     <meta charset="UTF-8"
     <meta name="viewport" content="widt=device-width, initial-scale=1.0">
     <title>Welcome to [website name]</title>
     <link rel="stylesheet" hred="../css/navbar.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/auth.js"></script>
+    <title>Sign Up</title>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="profile.html">Profile</a>
-        <a href="chat.html">Chat</a>
-        <a href="reviews.html">Reviews & Ratings</a>
-        <a href="tours.html">Customized Tours</a>
-    </nav>
+    <div class="login-container">
+        <h2>Sign Up</h2>
 
-    <!-- Main Content -->
-    <section id="home-feed">
-        <h1>Welcome to Travel Guide Match!</h1>
-        <p>Find guides based on your interests and explore new cities with a local expert!</p>
-        <!-- Add home feed content here -->
-    </section>
-    
-    <script src="js/main.js"></script>
+        <!-- Phone Number Field -->
+        <label for="signup-phone">Phone Number:</label>
+        <input type="text" id="signup-phone" required placeholder="Enter your phone number">
+
+        <!-- Username Field -->
+        <label for="signup-username">Username:</label>
+        <input type="text" id="signup-username" required placeholder="Choose a username">
+
+        <!-- Password Field -->
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" required placeholder="Create a password">
+
+        <!-- Sign Up Button -->
+        <button onclick="signUp()">Sign Up</button>
+
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+
+    <!-- Link to the JavaScript file containing the signUp function-->
+    <script src="auth.js"></script>
 </body>
 </html>
