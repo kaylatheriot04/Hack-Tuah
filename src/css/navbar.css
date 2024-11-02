@@ -1,0 +1,25 @@
+/* General styles for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 1em;
+}
+
+/* Styles for the navigation links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+}
+
+.navbar a {
+    background-color: #555;
+}
+
+/* Active link styling */
+.navbar .active {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
