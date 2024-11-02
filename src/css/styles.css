@@ -97,6 +97,11 @@ body {
   text-align: center;
 }
 
+/* Welcome page */
+#home-feed {
+  text-align: center;
+}
+
 /* Chat section styling */
 #chat-section {
   width: 100%;
