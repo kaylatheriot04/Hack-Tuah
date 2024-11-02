@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main - City Guide Hackathon</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!--nav bar-->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#messaging">Messaging</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#tours">Tours</a>
+    </nav>
+
+    <!--home-->
+    <div id="home" class="section">
+        <h2>Welcome to City Guide Hackathon</h2>
+        <p>Explore and connect with local guides around the world.</p>
+    </div>
+
+    <!--messaging
+    <div id="messaging" class="section">
+        <h2>Messaging</h2>
+        <div id="chatBox">
+            <div id="messageList"></div>
+            <input type="text" id="messageInput" placeholder="Type a message">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>-->
+
+    <!--reviews-->
+    <div id="reviews" class="section">
+        <h2>Reviews</h2>
+        <div class="ratingForm">
+            <label for="rating">Rate your guide (1-5): </label>
+            <input type="number" id="rating" min="1" max="5">
+            <textarea id="reviewText" placeholder="Write your review..."></textarea>
+            <button onclick="submitReview()">Submit</button>
+        </div>
+        <div id="reviewSection"></div>
+    </div>
+
+    <!--tours-->
+    <div id="tours" class="section">
+        <h2>Customized Tours</h2>
+        <div id="tourForm">
+            <input type="text" id="tourName" placeholder="Tour Name">
+            <textarea id="tourDescription" placeholder="Tour Description"></textarea>
+            <button onclick="createTour()">Create Tour</button>
+        </div>
+        <div id="tourSection"></div>
+    </div>
+
+    <!--safety features-->
+    <div id="safetyTips">
+        <h3>Safety Tips</h3>
+        <p>Meet in public places.</p>
+        <p>Inform a trusted person about your plans.</p>
+        <p>Know local emergency services information.</p>
+    </div>
+
+    <!--reporting system-->
+    <div id="reportSection">
+        <button onclick="reportUser()">Report User</button>
+        <div id="reportForm" style="display: none";>
+            <label for="reportReason">Reason for Report:</label>
+            <textarea id="reportReason" placeholder="Describe the issue..."></textarea>
+            <button onclick="submitReport()">Submit Report</button>
+        </div>
+    </div>
+        <div id="reportConfirmation" stle+"display: none; color: green;">
+            Thank you for your report. Our team will review it shortly.
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
