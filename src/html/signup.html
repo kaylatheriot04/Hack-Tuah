@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Sign Up</h2>
+
+        <!-- Phone Number Field -->
+        <label for="signup-phone">Phone Number:</label>
+        <input type="text" id="signup-phone" required placeholder="Enter your phone number">
+
+        <!-- Username Field -->
+        <label for="signup-username">Username:</label>
+        <input type="text" id="signup-username" required placeholder="Choose a username">
+
+        <!-- Password Field -->
+        <label for="signup-password">Password:</label>
+        <input type="password" id="signup-password" required placeholder="Create a password">
+
+        <!-- Sign Up Button -->
+        <button onclick="signUp()">Sign Up</button>
+        
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="js/auth.js"></script>
+</body>
+</html>
+

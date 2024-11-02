@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Chat</title>
+</head>
+<body>
+    <script src="js/loadNavbar.js"></script>
+
+    <section id="chat-section">
+        <h2>Chat with Your Guide</h2>
+
+        <div id="chat-messages">
+            <div class="chat-message">
+                <p><strong>Guide:</strong> Hello! How can I assist you?</p>
+                <button class="report-btn" onclick="openReportModal('Guide')">Report User</button>
+            </div>
+        </div>
+
+        <div id="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </section>
+
+    <div id="report-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeReportModal()">&times;</span>
+            <h3>Report User</h3>
+            <p>Reporting <span id="reported-user"></span></p>
+            <label for="report-reason">Reason:</label>
+            <select id="report-reason">
+                <option value="spam">Spam</option>
+                <option value="harassment">Harassment</option>
+                <option value="inappropriate">Inappropriate Content</option>
+            </select>
+            <label for="report-details">Details:</label>
+            <textarea id="report-details" placeholder="Describe the issue..."></textarea>
+            <button onclick="submitReport()">Submit Report</button>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>

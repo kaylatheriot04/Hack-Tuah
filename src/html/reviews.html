@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Reviews & Ratings</title>
+</head>
+<body>
+    <script src="js/loadNavbar.js"></script>
+
+    <section id="reviews-section">
+        <h2>Reviews & Ratings</h2>
+
+        <!-- Submit Review Form -->
+        <form id="review-form">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+            </select>
+
+            <label for="review-text">Review:</label>
+            <textarea id="review-text" placeholder="Write your review..."></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <!-- Display reviews here -->
+        <div id="review-list">
+            <h3>Previous Reviews</h3>
+            <!-- Dynamically populated reviews -->
+        </div>
+    </section>
+
+    <script src="js/reviews.js"></script>
+</body>
+</html>
