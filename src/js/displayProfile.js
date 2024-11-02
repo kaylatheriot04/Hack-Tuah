@@ -15,5 +15,9 @@ function loadProfile() {
     }
 }
 
+function editProfile() {
+    window.location.href = 'profile.html';
+}
+
 // Load the profile data on page load
 window.onload = loadProfile;
