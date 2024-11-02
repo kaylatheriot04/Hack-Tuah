@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Guide Details</title>
+</head>
+<body>
+    <script src="../js/loadNavbar.js"></script>
+
+    <section id="guide-details-section">
+        <h2 id="guide-name"></h2>
+        <p><strong>Location:</strong> <span id="guide-location"></span></p>
+        <p><strong>Bio:</strong> <span id="guide-bio"></span></p>
+        <p><strong>Interests:</strong> <span id="guide-interests"></span></p>
+
+        <!-- Reviews Section -->
+        <h3>Reviews and Ratings</h3>
+        <div id="reviews-list">
+            <!-- Reviews will be dynamically loaded here -->
+        </div>
+
+        <!-- Add Review Form -->
+        <h3>Add Your Review</h3>
+        <form id="review-form" onsubmit="addReview(event)">
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Fair</option>
+                <option value="1">1 - Poor</option>
+            </select>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" placeholder="Write your review" required></textarea>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </section>
+
+    <script src="../js/guides.js"></script>
+    <script src="../js/guideDetails.js"></script>
+</body>
+</html>

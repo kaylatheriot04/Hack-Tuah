@@ -260,3 +260,22 @@ body {
 .modal button:hover {
   background-color: #d9363e;
 }
+
+
+/* Styles for guide cards */
+.guide-card {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.guide-card h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.guide-card p {
+    margin: 0.5em 0;
+}
