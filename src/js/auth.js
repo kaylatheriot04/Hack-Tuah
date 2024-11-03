@@ -1,4 +1,4 @@
-alert("auth.js is loaded");
+
 
 // Signup function with username uniqueness check and redirect to profile creation
 function signUp() {

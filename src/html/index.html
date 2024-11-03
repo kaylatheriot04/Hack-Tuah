@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to [website name]</title>
-    <link rel="stylesheet" hred="../css/navbar.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/auth.js"></script>
     <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div class="login-container">
-        <h2>Sign Up</h2>
+    <!-- Header with Logo -->
+    <header class="site-header">
+        <img src="../pictures/logo.png" alt="Logo" class="logo">
+    </header>
 
-        <!-- Phone Number Field -->
-        <label for="signup-phone">Phone Number:</label>
-        <input type="text" id="signup-phone" required placeholder="Enter your phone number">
-
-        <!-- Username Field -->
-        <label for="signup-username">Username:</label>
-        <input type="text" id="signup-username" required placeholder="Choose a username">
-
-        <!-- Password Field -->
-        <label for="signup-password">Password:</label>
-        <input type="password" id="signup-password" required placeholder="Create a password">
-
-        <!-- Sign Up Button -->
-        <button onclick="signUp()">Sign Up</button>
-
-        <p>Already have an account? <a href="../html/login.html">Log In</a></p>
+    <!-- Navbar (loaded via JavaScript) -->
+    <div id="navbar-container">
+        <script src="../js/loadNavbar.js"></script>
     </div>
 
-    <!-- Link to the JavaScript file containing the signUp function-->
+    <!-- Centered Sign-Up Form Container -->
+    <div class="login-container center-content" id="signup-content">
+        <h2>Sign Up</h2>
+
+        <!-- Sign-Up Form -->
+        <form id="signup-form" onsubmit="signUp(); return false;">
+            <label for="signup-phone">Phone Number:</label>
+            <input type="text" id="signup-phone" required placeholder="Enter your phone number">
+
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" required placeholder="Choose a username">
+
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" required placeholder="Create a password">
+
+            <button type="submit">Sign Up</button>
+
+            <p>Already have an account? <a href="../html/login.html">Log In</a></p>
+        </form>
+    </div>
+
+    <!-- Script for authentication -->
     <script src="../js/auth.js"></script>
 </body>
 </html>
