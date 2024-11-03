@@ -32,13 +32,24 @@ function submitReport() {
 
 // Example function for sending a message
 function sendMessage() {
-    const message = document.getElementById('message-input').value;
-    if (message) {
-        const chatMessages = document.getElementById('chat-messages');
+    const input = document.getElementById('message-input');
+    const messageText = input.value;
+
+    if (messageText.trim() !== "") {
         const newMessage = document.createElement('div');
         newMessage.className = 'chat-message';
-        newMessage.innerHTML = `<p><strong>You:</strong> ${message}</p>`;
-        chatMessages.appendChild(newMessage);
-        document.getElementById('message-input').value = '';
+        newMessage.textContent = messageText;
+        
+        document.getElementById('chat-messages').appendChild(newMessage);
+        input.value = "";
+
+        const chatMessages = document.getElementById('chat-messages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 }
+document.getElementById('message-input').addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        sendMessage();
+    }
+});
