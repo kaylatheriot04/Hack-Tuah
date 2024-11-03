@@ -8,6 +8,13 @@
 </head>
 <body>
     <script src="../js/loadNavbar.js"></script>
+    <body>
+        <input type="text" id="searchInput" placeholder="Search for location..." oninput="searchItems()">
+        <button onclick="searchGuides()">Search</button>
+        <ul id="results"></ul>
+      
+        <script src="../js/search.js"></script>
+      </body>
 
     <section id="guides-section">
         <h2>Available Guides</h2>
@@ -15,6 +22,7 @@
             <!-- Guide profiles will be dynamically loaded here -->
         </div>
     </section>
+
 
     <script src="../js/guides.js"></script>
 </body>
