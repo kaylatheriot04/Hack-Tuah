@@ -14,16 +14,19 @@
         <!-- Profile Form -->
         <form id="profile-form" onsubmit="saveProfile(event)">
             <label for="full-name">Name:</label>
-            <input type="text" id="full-name" name="name" placeholder="enter your name" required>
+            <input type="text" id="full-name" name="name" placeholder="First name" required>
+
+            <label for="title">Title</label>
+            <input type="text" id="title" title="title" placeholder="Traveler or guide?" required>
 
             <label for="interests">Interests:</label>
             <input type="text" id="interests" name="interests" placeholder="e.g., Art, Food, Hiking" required>
 
             <label for="location">Location:</label>
-            <input type="text" id="location" name="location" placeholder="City, Country" required>
+            <input type="text" id="location" name="location" placeholder="Where are you traveling?" required>
 
             <label for="bio">Bio:</label>
-            <input type="text" id="bio" name="bio" placeholder="Tell a bit about yourself" required>
+            <input type="text" id="bio" name="bio" placeholder="Tell a bit about yourself!" required>
 
             <button type="submit">Save Profile</button>
         </form>

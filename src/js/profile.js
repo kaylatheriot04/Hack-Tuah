@@ -19,9 +19,10 @@ function saveProfile(event) {
     const interests = document.getElementById('interests').value;
     const location = document.getElementById('location').value;
 
-    if (fullName && bio && interests && location) {
+    if (fullName && title && bio && interests && location) {
         const userProfile = {
             fullName: fullName,
+            title: title,
             bio: bio,
             interests: interests,
             location: location
