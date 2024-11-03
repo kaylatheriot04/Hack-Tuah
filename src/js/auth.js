@@ -1,8 +1,7 @@
 
-
 // Signup function with username uniqueness check and redirect to profile creation
 function signUp() {
-    alert("Sign Up button clicked!"); // This alert checks if the function is called
+    //alert("Sign Up button clicked!"); // This alert checks if the function is called
 
     const phone = document.getElementById('signup-phone').value;
     const username = document.getElementById('signup-username').value;
@@ -23,7 +22,7 @@ function signUp() {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('currentUser', JSON.stringify(newUser));
 
-            alert('Sign up successful! Please complete your profile.');
+            //alert('Sign up successful! Please complete your profile.');
             window.location.href = "profile.html";
         }
     } else {
@@ -33,8 +32,8 @@ function signUp() {
 
 // Login function to authenticate users and manage sessions
 function logIn() {
-    const username = document.getElementById('login-username').value;
-    const password = document.getElementById('login-password').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
     const users = JSON.parse(localStorage.getItem('users')) || [];
     const user = users.find(user => user.username === username && user.password === password);
@@ -43,8 +42,20 @@ function logIn() {
         localStorage.setItem('isLoggedIn', 'true');
         localStorage.setItem('currentUser', JSON.stringify(user));
         alert('Log in successful!');
-        window.location.href = 'index.html';
+        window.location.href = "../html/main.html";
     } else {
         alert('Incorrect username or password');
     }
 }
+
+document.getElementById('password').addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        logIn();
+    }
+});
+
+document.getElementById('username').addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        logIn();
+    }
+});

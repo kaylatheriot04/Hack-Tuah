@@ -1,202 +1,190 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f2f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Header Logo */
-.site-header {
   display: flex;
   justify-content: center;
-  padding: 20px;
-  background-color: #f0f2f5; /* Matches the page background */
-}
-
-.logo {
-  max-width: 120px;
-  height: auto;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: center;
-  background-color: #333; /* Dark background only for the navbar */
-  padding: 10px 0;
-}
-
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 1rem;
-  padding: 8px 16px;
-  transition: background-color 0.3s;
-  border-radius: 4px;
-}
-
-.navbar a:hover {
-  background-color: #555;
-}
-
-.navbar a.active {
-  background-color: #007bff;
-  color: #fff;
-}
-
-/* Center Content */
-.center-content {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  margin: 20px;
-  width: 100%;
-  max-width: 700px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5; /* Light grey background */
 }
 
-/* Headings */
-h2 {
-  font-size: 1.8rem;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Forms */
-form {
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-label {
-  font-weight: bold;
-  color: #555;
-}
-
-input[type="text"],
-input[type="password"],
-textarea,
-select {
-  width: 100%;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 12px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Sign-Up & Login Container */
 .login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
   background-color: #fff;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer, larger shadow */
+  width: 350px;
+  text-align: center;
 }
 
-/* Chat Section */
-#chat-section h2 {
-  color: #333;
+.login-container h2 {
   margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 70%; /* Set input width to 70% to make it shorter */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 70%; /* Set button width to match input width */
+  padding: 12px;
+  background-color: #007bff; /* Blue color */
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.login-container .forgot-password {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-container .forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Loading Screen */
+#loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+/* Loading Logo Animation */
+.loading-logo {
+  width: 80px; /* Initial size of the logo */
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Pulse Animation for Logo */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Logo scales to 120% of its original size */
+  }
+}
+
+/* Main Content (Initially hidden) */
+#main-content {
+  text-align: center;
+}
+
+/* Welcome page */
+#home-feed {
+  text-align: center;
+}
+
+/* Chat section styling */
+#chat-section {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+#chat-section h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 #chat-messages {
-  max-width: 500px;
-  width: 100%;
-  background-color: #f9f9f9;
-  padding: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
   border-radius: 8px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 
 .chat-message {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
 }
 
 .chat-message p {
   margin: 0;
-  padding-bottom: 10px;
 }
 
+.chat-message strong {
+  color: #007bff;
+}
+
+/* Report button styling */
 .report-btn {
-  align-self: flex-end;
   background-color: #ff4d4f;
-  color: #fff;
-  padding: 5px 10px;
+  color: #ffffff;
   border: none;
+  padding: 5px 10px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
-  margin-top: 5px;
 }
 
 .report-btn:hover {
   background-color: #d9363e;
 }
 
-/* Chat Input */
+/* Chat input styling */
 #chat-input {
   display: flex;
   gap: 10px;
-  max-width: 500px;
-  width: 100%;
-  align-items: center;
+  margin-top: 10px;
 }
 
 #message-input {
   flex: 1;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  resize: vertical;
-  min-height: 50px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 #chat-input button {
   padding: 10px 20px;
   background-color: #007bff;
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
@@ -204,7 +192,7 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Modal */
+/* Modal styling */
 .modal {
   display: none;
   position: fixed;
@@ -219,7 +207,7 @@ button:hover {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   width: 90%;
@@ -241,6 +229,10 @@ button:hover {
   color: #333;
 }
 
+.modal p {
+  margin-bottom: 10px;
+}
+
 .modal label {
   display: block;
   margin-top: 10px;
@@ -248,6 +240,7 @@ button:hover {
   color: #333;
 }
 
+.modal select,
 .modal textarea {
   width: 100%;
   padding: 8px;
@@ -262,7 +255,7 @@ button:hover {
   padding: 10px;
   margin-top: 15px;
   background-color: #ff4d4f;
-  color: #fff;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -273,61 +266,21 @@ button:hover {
   background-color: #d9363e;
 }
 
-/* Profile Section */
-#profile-section {
-  text-align: left;
-  padding: 20px;
-  max-width: 500px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+/* Styles for guide cards */
+.guide-card {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
-/* Reviews Section */
-#reviews-section {
-  max-width: 600px;
-  width: 100%;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.guide-card h3 {
+    margin: 0;
+    font-size: 1.5em;
 }
 
-#review-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#review-list {
-  margin-top: 20px;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.review-item {
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.review-item h4 {
-  color: #007bff;
-  font-size: 1.1rem;
-}
-
-.review-item p {
-  color: #555;
-  margin: 5px 0;
-}
-
-/* Adjusting buttons and link styles */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+.guide-card p {
+    margin: 0.5em 0;
 }
