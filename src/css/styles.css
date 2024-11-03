@@ -331,3 +331,85 @@ a {
 a:hover {
   text-decoration: underline;
 }
+/* Guides Section Styling */
+#guides-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#guides-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Guides List Styling */
+#guides-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.guide-profile {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.guide-profile:hover {
+  transform: translateY(-5px);
+}
+
+.guide-profile img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.guide-profile h3 {
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.guide-profile p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.guide-profile .guide-location {
+  font-weight: bold;
+  color: #333;
+}
+
+.guide-profile .view-profile-btn {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  background-color: #007bff;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.guide-profile .view-profile-btn:hover {
+  background-color: #0056b3;
+}
+
