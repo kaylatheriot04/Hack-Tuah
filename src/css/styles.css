@@ -25,6 +25,10 @@ body {
   max-width: 120px;
   height: auto;
 }
+.logo:hover {
+  cursor: pointer;
+
+}
 
 /* Navbar */
 .navbar {
