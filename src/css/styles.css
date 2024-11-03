@@ -412,4 +412,7 @@ a:hover {
 .guide-profile .view-profile-btn:hover {
   background-color: #0056b3;
 }
+.search {
+  width: 70%
+}
 
