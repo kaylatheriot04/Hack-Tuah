@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews & Ratings</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <title>Reviews</title>
 </head>
 <body>
-    <script src="js/loadNavbar.js"></script>
+    <!-- Header with Logo -->
+    <header class="site-header">
+        <img src="../pictures/logo.png" alt="Logo" class="logo">
+    </header>
 
-    <section id="reviews-section">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="chat.html">Chat</a>
+        <a href="reviews.html">Reviews & Ratings</a>
+        <a href="tours.html">Customized Tours</a>
+        <a href="logout.html">Log Out</a>
+    </nav>
+
+    <!-- Reviews Section -->
+    <section id="reviews-section" class="center-content">
         <h2>Reviews & Ratings</h2>
 
         <!-- Submit Review Form -->
@@ -29,7 +43,7 @@
             <button type="submit">Submit Review</button>
         </form>
 
-        <!-- Display reviews here -->
+        <!-- Display Reviews -->
         <div id="review-list">
             <h3>Previous Reviews</h3>
             <!-- Dynamically populated reviews -->
