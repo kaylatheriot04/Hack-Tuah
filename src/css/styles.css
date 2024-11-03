@@ -1,3 +1,65 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f2f5; /* Light grey background */
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer, larger shadow */
+  width: 350px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 70%; /* Set input width to 70% to make it shorter */
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.login-container button {
+  width: 70%; /* Set button width to match input width */
+  padding: 12px;
+  background-color: #007bff; /* Blue color */
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.login-container .forgot-password {
+  display: inline-block;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.login-container .forgot-password:hover {
+  text-decoration: underline;
+}
 
 
 
@@ -203,217 +265,22 @@
 .modal button:hover {
   background-color: #d9363e;
 }
-/* Navbar styling */
-/* Navbar styling for Tinder-like look */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #000; /* Black background */
-  padding: 10px 30px;
-  color: #fff; /* White text */
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 1rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #ccc; /* Light gray on hover */
-}
-
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-right: auto; /* Push logo to the left */
-}
-
-.navbar .login-btn {
-  background-color: #fff;
-  color: #000;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 1rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.navbar .login-btn:hover {
-  background-color: #ddd;
-}
-
-/* Language option styling (optional) */
-.language {
-  margin-right: 15px;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  color: #fff;
-}
 
 
-/* Profile section styling */
-#profile-section {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
+/* Styles for guide cards */
+.guide-card {
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
 }
 
-#profile-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #333;
+.guide-card h3 {
+    margin: 0;
+    font-size: 1.5em;
 }
 
-/* Profile form styling */
-#profile-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#profile-form label {
-  text-align: left;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-#profile-form input[type="text"] {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-}
-
-#profile-form input[type="text"]::placeholder {
-  color: #aaa;
-}
-
-#profile-form button {
-  padding: 10px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#profile-form button:hover {
-  background-color: #0056b3;
-}
-/* Reviews Section styling */
-#reviews-section {
-  max-width: 600px;
-  width: 100%;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
-  margin: 20px;
-}
-
-#reviews-section h2 {
-  font-size: 1.8rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Review Form styling */
-#review-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
-}
-
-#review-form label {
-  font-weight: bold;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-#review-form select,
-#review-form textarea,
-#review-form button {
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-family: inherit;
-}
-
-#review-form select {
-  background-color: #f9f9f9;
-}
-
-#review-form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-#review-form button {
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-#review-form button:hover {
-  background-color: #0056b3;
-}
-
-/* Review List styling */
-#review-list {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#review-list h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333;
-  text-align: center;
-}
-
-.review-item {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-}
-
-.review-item:last-child {
-  border-bottom: none;
-}
-
-.review-item h4 {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #007bff;
-  margin-bottom: 5px;
-}
-
-.review-item p {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+.guide-card p {
+    margin: 0.5em 0;
 }
