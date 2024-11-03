@@ -1,53 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to [website name]</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <div class="form-container">
-        <div class="form-section">
+    <!-- Header with Logo -->
+    <header class="site-header">
+        <img src="../pictures/logo.png" id="logo" alt="Logo" class="logo">
+    </header>
+
+    <!-- Navbar (loaded via JavaScript) -->
+    <div id="navbar-container">
+        <script src="../js/loadNavbar.js"></script>
+    </div>
+
+    <!-- Centered Sign-Up Form Container -->
+    <div class="login-container center-content" id="signup-content">
         <h2>Sign Up</h2>
-        <form id="signupForm" onsubmit="signUp(); return false;">
 
-            <!-- Phone Number Field -->
+        <!-- Sign-Up Form -->
+        <form id="signup-form" onsubmit="signUp(); return false;">
             <label for="signup-phone">Phone Number:</label>
-            <input type="tel" id="signup-phone" required placeholder="Enter your phone number">
+            <input type="text" id="signup-phone" required placeholder="Enter your phone number">
 
-            <!-- Username Field -->
             <label for="signup-username">Username:</label>
             <input type="text" id="signup-username" required placeholder="Choose a username">
 
-            <!-- Password Field -->
             <label for="signup-password">Password:</label>
             <input type="password" id="signup-password" required placeholder="Create a password">
 
-            <!-- Sign Up Button -->
             <button type="submit">Sign Up</button>
+
+            <p>Already have an account? <a href="../html/login.html">Log In</a></p>
         </form>
-            <p class="account-prompt">Already have an account? <a href="../html/login.html">Log in here</a></p>
-        </div>
+    </div>
 
-        <!-- Log In Form-->
-            <div class="form-section" id="login" style="display: none;">
-                <h2>Log In</h2>
-                <form id="loginForm" onsubmit="logIn(); return false;">
-                    <label for="login-username">Username</label>
-                    <input type="text" id="login-username" required>
-
-                    <label for="login-password">Password</label>
-                    <input type="password" id="login-password" required>
-
-                <button type="submit">Log In</button>
-            </form>
-            </div>
-            </div>
-
-        
-
-    <!-- Link to the JavaScript file containing the signUp function-->
-     <script src="../js/auth.js"></script>
+    <!-- Script for authentication -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/logo.js"></script>
 </body>
 </html>
